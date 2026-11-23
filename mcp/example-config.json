@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "visiki": {
+      "command": "C:/path/to/Visiki/node_modules/electron/dist/electron.exe",
+      "args": [
+        "C:/path/to/Visiki/mcp/server.cjs",
+        "--endpoint-file",
+        "C:/path/to/Visiki/.demo-data/agent-endpoint.json"
+      ],
+      "env": {
+        "ELECTRON_RUN_AS_NODE": "1"
+      }
+    }
+  }
+}

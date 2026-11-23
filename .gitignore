@@ -1,0 +1,16 @@
+node_modules/
+dist/
+dist-server/
+dist-native/
+.demo-data/
+*.log
+test-results/
+/MCP配置.json
+/agent-endpoint.json
+/Visiki.lnk
+/VST3/
+.env
+.env.*
+*.visiki.json
+*.visiki-daw.json
+*.echo.json

@@ -1,0 +1,41 @@
+.workspace-welcome {
+  height: 100%;
+  min-width: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 28px 64px;
+  background: radial-gradient(ellipse at 50% 4%, #292634 0%, #1b1b22 54%, #18191f 100%);
+  color: #e7e4ee;
+}
+.workspace-welcome-content { width: min(100%, 720px); margin: auto; }
+.workspace-welcome h1 { margin: 0; font-size: clamp(24px, 3vw, 30px); line-height: 1.25; font-weight: 600; text-align: center; }
+.workspace-welcome-options { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 26px; }
+.workspace-welcome-card {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  min-width: 0;
+  min-height: 112px;
+  padding: 20px;
+  border: 1px solid #41404c;
+  border-radius: 10px;
+  background: #25252e;
+  color: #e7e4ee;
+  text-align: left;
+  transition: background .15s, border-color .15s, transform .15s;
+}
+.workspace-welcome-card:hover { background: #2d2b37; border-color: #84729e; transform: translateY(-2px); }
+.workspace-welcome-card:focus-visible { outline: 2px solid #c4a8fa; outline-offset: 3px; }
+.workspace-welcome-icon { display: grid; flex: 0 0 46px; width: 46px; height: 46px; place-items: center; border: 1px solid #6a587c; border-radius: 9px; background: #a78bd322; color: #cbb4f1; }
+.workspace-welcome-card-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; align-items: flex-start; }
+.workspace-welcome-card-copy strong { margin-top: 2px; font-size: 17px; line-height: 1.4; font-weight: 600; }
+.workspace-welcome-card-copy > span { margin-top: 5px; color: #aaa9b7; font-size: 12px; line-height: 1.6; }
+.workspace-welcome-arrow { color: #bda9dc; flex: none; }
+@media (max-width: 600px) {
+  .workspace-welcome { padding: 36px 20px; }
+  .workspace-welcome-options { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
+  .workspace-welcome-card { min-height: 0; padding: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { .workspace-welcome-card { transition: none; } }

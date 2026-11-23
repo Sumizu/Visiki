@@ -1,0 +1,3 @@
+interface:
+  display_name: "Visiki 音频工作区"
+  short_description: "通过 Visiki MCP 编辑音轨、试听混音并导出音频"

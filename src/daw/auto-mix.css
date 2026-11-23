@@ -1,0 +1,42 @@
+.daw-modal.daw-auto-mix-modal{width:760px;max-width:calc(100vw - 40px)}
+.daw-auto-mix{font-size:12px}
+.daw-auto-mix p{margin:0 0 12px}
+.daw-auto-mix-section{margin:12px 0;padding:14px;border:1px solid #383945;border-radius:8px;background:#20212a}
+.daw-auto-mix-section h3{margin:0 0 12px;font-size:12px;color:#e0deed;font-weight:550}
+.daw-auto-mix-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.daw-auto-mix-field{display:grid;gap:6px;color:#a9aabb;font-size:10px}
+.daw-auto-mix select,.daw-auto-mix input[type=number]{min-width:0;width:100%;box-sizing:border-box;background:#191a22;border:1px solid #40414e;border-radius:5px;padding:7px 9px;color:#ededf3;font:inherit}
+.daw-auto-mix input[type=checkbox],.daw-auto-mix input[type=radio]{accent-color:#a2a1ff}
+.daw-auto-mix-check{display:flex;align-items:center;gap:7px;color:#c5c6d2;font-size:11px}
+.daw-auto-mix-check input{margin:0}
+.daw-auto-mix-inline{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.daw-auto-mix-options{display:flex;flex-wrap:wrap;gap:7px}
+.daw-auto-mix-options button.active{border-color:#a49ced;background:#3c3652;color:#eeeaff}
+.daw-auto-mix-hint{font-size:10px;color:#9294a8;line-height:1.6}
+.daw-auto-mix-warning{color:#edb383!important;font-size:11px}
+.daw-auto-mix-result{display:grid;gap:8px}
+.daw-auto-mix-row{display:flex;align-items:flex-start;gap:8px;padding:9px 10px;background:#292a35;border:1px solid #3a3b49;border-radius:6px}
+.daw-auto-mix-row div{flex:1;min-width:0}
+.daw-auto-mix-row strong{display:block;font-weight:500;color:#e2dfef}
+.daw-auto-mix-row small{display:block;margin-top:4px;color:#a5a5b7;line-height:1.5}
+.daw-auto-mix-preview{display:grid;gap:10px}
+.daw-auto-mix-preview audio{width:100%;height:36px}
+.daw-auto-mix-busy{display:flex;align-items:center;gap:9px;color:#b0aaff}
+.daw-auto-mix button:disabled{opacity:.45;cursor:default}
+.daw-auto-mix details summary{cursor:pointer;color:#bcbad0}
+.daw-auto-mix details[open] summary{margin-bottom:12px}
+.daw-auto-mix .daw-modal-actions{flex-wrap:wrap}
+.daw-auto-mix-ranges{display:grid;gap:7px;max-height:140px;overflow:auto}
+.daw-auto-mix-range{display:flex;align-items:center;gap:8px;color:#c5c6d2;font-size:11px}
+.daw-auto-mix-range input[type=number]{width:78px;padding:4px 6px}
+.daw-auto-mix-range input[type=checkbox]{margin:0}
+.daw-auto-mix-section > p:last-child { margin-bottom: 0; }
+.daw-auto-mix-handoffs { margin-top: 12px; }
+.daw-auto-mix-time { width: 80px; }
+.daw-auto-mix-quality { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 12px; color: #bbb9ce; }
+.daw-auto-mix-quality b { margin-right: 8px; font-weight: 500; color: #e0deed; }
+.daw-auto-mix-result + .daw-auto-mix-hint { margin-top: 9px; }
+.daw-auto-mix-row small.daw-auto-mix-effect-values { color: #c7bfff; font-variant-numeric: tabular-nums; }
+.daw-auto-mix-effect-values:empty { display: none; }
+.daw-auto-mix p.daw-auto-mix-bypass { padding: 9px 12px; border: 1px solid #56485e; border-radius: 6px; background: #2e2538; color: #ded0e9; }
+@media(max-width:650px){.daw-auto-mix-grid{grid-template-columns:1fr}.daw-auto-mix .daw-modal-actions{justify-content:stretch}.daw-auto-mix .daw-modal-actions button{flex:1}}

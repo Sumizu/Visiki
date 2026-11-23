@@ -1,0 +1,46 @@
+{
+  "name": "visiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Music video editor and multitrack audio mixer",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "node native/check-build.cjs --ensure && npm run build:rhythm-worker && concurrently -k \"tsx server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "node native/check-build.cjs --ensure && tsc --noEmit && vite build && esbuild server/index.ts --platform=node --format=cjs --packages=external --bundle --outfile=dist-server/server.cjs && npm run build:rhythm-worker",
+    "build:native": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File native/build.ps1",
+    "check:native": "node native/check-build.cjs --check",
+    "test:native": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File native/test-dsp.ps1",
+    "build:rhythm-worker": "esbuild server/daw-rhythm-worker.ts --platform=node --format=cjs --packages=external --bundle --outfile=dist-server/daw-rhythm-worker.cjs",
+    "start": "node dist-server/server.cjs",
+    "desktop": "electron electron/main.cjs",
+    "mcp": "node mcp/server.cjs",
+    "test": "tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "express": "5.3.0",
+    "lucide-react": "1.66.0",
+    "multer": "2.5.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "5.0.6",
+    "@types/multer": "2.3.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "concurrently": "10.0.6",
+    "electron": "45.2.1",
+    "esbuild": "0.28.2",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2",
+    "vite": "7.3.7"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sumizu/Visiki.git"
+  }
+}

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Visiki 音乐视频"
+  icon_small: "./assets/visiki-64.png"
+  icon_large: "./assets/visiki.png"
+  short_description: "通过 Visiki MCP 创建和修改音乐歌词视频，调整轨道、字幕、效果并导出 MP4"
